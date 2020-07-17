@@ -1,0 +1,42 @@
+
+  Assignment 5
+  
+  Student id-200240520084
+  
+  1.Write a query that will give you all orders for more than Rs. 1,000.
+-->
+
+   select * from orders where Amt >= 1000;
+   
+  2.Write a query that will give you the names and cities of all salespeople in London with a commission above .10.
+-->
+
+   select Sname,City from salespeople where = 'London' or Comm > .10;
+   
+  3.Write a query on the Customers table whose output will exclude all customers with a rating <= 100, 
+    unless they are located in Rome.
+-->
+
+     select * from customers where rating <= 100 and City != 'Rome';
+	 
+  4.What will be the output from the following query?
+       Select * from Orders where (Amt < 1000 OR NOT (Odate = ‘1990-10-03’ AND Cnum > 2003));
+-->
+
+   5.What will be the output of the following query?
+   
+ Select * from Orders where NOT ((odate = ‘1990-10-03’ OR snum >1006) AND amt >= 1500);
+ 
+ -->
+ 
+ 
+  6.What is a simpler way to write this query?
+    Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
+-->
+  
+    select * from salespeople where(Comm > .12 or Comm <.14);
+    
+
+        
+                            
+
