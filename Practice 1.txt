@@ -1,0 +1,75 @@
+
+create database Employee_Management;
+
+show databases;
+
+use Employee_Management;
+
+show tables;
+
+create table Emp(empno char(4),Ename varchar(20),sal float(7,2),city varchar(15),
+
+  dob date,primary key(empno));
+  
+  show tables;
+  
+  desc Emp;
+  
+  create table Dept(deptno char(4),dname varchar(20),primary key(deptno),
+  empno char(4),
+  
+  FOREIGN key(empno) REFERENCES Emp(empno));
+  
+  desc Dept;
+  
+  insert into Emp values('1001','samrat',5000,'London','1995-05-04');
+  
+  select * from Dept;
+  
+  select * from Emp;
+  
+  insert into Emp values('1002','sandesh',6000,'London','1996-07-03');
+  
+  insert into Emp values('1003','shubham',7000,'paris','1997-08-07');
+  
+  insert into Emp values('1004','rahul',8000,'paris','1996-08-06');
+  
+  insert into Emp values('1005','mahesh',9000,'new york','1995-09-08');
+  
+ insert into Emp values('1006','rajesh',4000,'athens','1996-04-03');
+ 
+ insert into Emp values('1007','sumit',7000,'mumbai','1998-08-02');
+ 
+ insert into Emp values('1008','samrat',1000,'delhi','1994-09-02');
+ 
+  insert into Dept values('1','computer','1002');
+  
+  insert into Dept values('2','computer','1002');
+  
+  insert into Dept values('3','electronics','1005');
+  
+  select * from Dept where deptno='1';
+ 
+ select * from Emp where city='london';
+ 
+ select Ename,empno,city from Emp;
+ 
+ select * from Emp where sal>5000;
+ 
+ select * from Emp where sal<3000;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+  
+  
+  
+    
+  
+  
+  
