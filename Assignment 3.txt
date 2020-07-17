@@ -1,0 +1,23 @@
+
+ 
+ Assignment 3
+ 
+ Student id - 200240520084
+ 
+ 
+   1.Does ANSI recognize the data type DATE?
+-->
+    Yes ANSI does recognize the data type DATE
+	
+  2.Which subdivision of SQL is used to insert values in tables?
+-->
+
+    DML-Data maupulation langauge subdivision has 3 rs commands in SQL
+	1.insert
+	2.update
+	3.Delete 
+	
+	"insert" command is used to insert the data in table
+	
+	example - INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)  
+                 VALUES (value1, value2, value3,...valueN);
