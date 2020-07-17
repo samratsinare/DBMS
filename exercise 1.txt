@@ -1,0 +1,183 @@
+create database cdac_ex;
+
+show databases;
+
+use cdac_ex;
+
+create table SEMP (EMPNO CHAR(4),
+EMPNAME CHAR(20),
+BASIC FLOAT(9,2),
+DEPTNO CHAR(2),
+DEPTHEAD CHAR(4));
+
+desc SEMP;
+
+
+insert into SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD)
+
+  values('0001', 'SUNIL', 6000.00, '10','m');
+  
+  
+  insert into SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD)
+  
+    values('0002','HIREN', 8000.01, '20','f');
+    
+ insert into SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD)
+  
+    values('0003', 'ALI', 4000.02, '10', '0001');
+    
+
+ insert into SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD)
+  
+    values('0004','GEORGE', 6000.03,'30','0003');
+    
+  select * from SEMP;
+  
+  create table SDEPT(DEPTNO CHAR(2),DEPTNAME CHAR(15));
+  
+  desc SDEPT;
+    
+  insert into SDEPT(DEPTNO,DEPTNAME) 
+  
+    values('10','Development');
+    
+  insert into SDEPT(DEPTNO,DEPTNAME)
+  
+     values('20','Training');
+     
+  select * from SDEPT;
+  
+  create table S(`S#` char(4),Sname varchar(20),Status int(4),City varchar(20));
+  
+    desc S;
+    
+  insert into S(`S#`,Sname,Status,City) 
+  
+    values('S1','anthony',10,'London');
+    
+     insert into S(`S#`,Sname,Status,City) 
+  
+    values('S2','jack',20,'paris');
+    
+     insert into S(`S#`,Sname,Status,City) 
+  
+    values('S3','sansa',30,'Athens');
+    
+    insert into S(`S#`,Sname,Status,City) 
+  
+    values('S4','dani',40,'London');
+    
+    select * from S;
+    
+    
+    create table P(`P#` char(4),Pname varchar(20),Color varchar(20),Weight int(4),City varchar(20));
+    
+    desc P;
+    
+    insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P1','sam','white',12,'London');
+      
+	insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P2','jimmy','black',14,'Paris');
+      
+      insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P3','sersi','grey',13,'London');
+      
+      select * from P;
+    
+    
+    create table J(`J#` char(4),Jname varchar(20),City varchar(20));
+    
+     desc J;
+    
+    insert into J(`J#`,Jname,City)
+    
+      values('J1','EHome','London');
+      
+      insert into J(`J#`,Jname,City)
+    
+      values('J2','EMail','Athens');
+      
+      insert into J(`J#`,Jname,City)
+    
+      values('J3','Ecom','paris');
+      
+      select * from J;
+      
+      create table SPJ(`S#`char(4),`P#` char(4),`J#` char(4),Qty int(4));
+      
+      desc SPJ;
+      
+
+     select * from S;
+     
+     select `S#`,Sname from S;
+     
+     select Pname,Color from P where City='London';
+     
+     select * from S where City='London';
+      
+	 select * from S where City='paris' or City= 'Athens';
+     
+    select * from J where City='Athens';
+    
+    use cdac_ex;
+    
+    select * from P;
+    
+    select * from P where Weight =12 or Weight <=14;
+    
+    
+     insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P4','sandesh','yellow',11,'thems');
+      
+       insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P5','rahul','blue',15,'africa');
+      
+      select * from P where Weight >=12 and Weight <=14;
+      
+      
+      select * from P;
+      
+      select * from S;
+      
+      select * from S where Status >=20;
+      
+      select City from S;
+      
+      select * from P;
+      
+      alter table P modify Weight char(6);
+      
+      desc P;
+      
+      insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P6','akshay','yellow','18 mg','thems');
+      
+      insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P7','sanjit','red','0011kg','thems');
+      
+      select * from P;
+      
+      
+    
+    
+   
+   
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
