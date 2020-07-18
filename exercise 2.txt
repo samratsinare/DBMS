@@ -1,0 +1,73 @@
+
+  use cdac_ex;
+  
+  show tables;
+  
+  select * from S ;
+  
+  select * from S order by City desc;
+  
+  select * from S where Status >=10 and Status <=20;
+  
+  select * from P;
+  
+  select * from P where Not Weight >='10' and Weight <='15';
+  
+  select * from P;
+  
+  insert into P(`P#`,Pname,Color,Weight,City)
+    
+      values('P8','sinare','voilet','17','thems');
+      
+      use cdac_ex;
+      
+      select * from S;
+      
+      
+      -- Question 1
+      select * from S order by City desc;
+      
+      -- Question 3
+      
+      select * from S where status between 5 and 10;
+      
+      select * from S where status >=10 and status<=20;
+      
+      -- Qustion 4
+      
+      select * from P;
+      
+      select * from P where Weight not between 10 and 15;
+      
+      -- Question 5
+      
+      select * from P where Pname like 'S%';
+      
+      select * from P where Pname >'s' and Pname <'t';
+      
+      -- Question 6
+      
+      select * from S where City like 'L%';
+      
+      
+      -- Question 7
+      
+      select * from j;
+      
+      insert into j values('j4','Eann','London');
+      
+      select * from j where Jname like '%n%';
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+ 
+      
+      
