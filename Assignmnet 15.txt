@@ -1,0 +1,49 @@
+
+ -- Assignment 15
+ 
+ -- Name - Samrat Ashok Sinare
+ 
+ -- Student - 200240520084
+ 
+ use cdac_juhu;
+ 
+ desc orders;
+ 
+ select * from customers;
+ 
+ desc customers;
+ 
+ select * from orders;
+ 
+ /*1.Assume there is a table called Multicust, with all of the same column definitions
+as Salespeople. Write a command that inserts all salespeople with more than one
+customer into this table.*/
+
+ create table multicust as select * from salespeople
+ 
+ where snum =any(select snum from customers group by snum having count(snum)>1);
+ 
+ select * from multicust;
+ 
+ 
+/*2.Write a command that deletes all customers with no current orders.*/
+
+
+  delete from customers where Cnum not in(select Cnum from orders);
+  
+  select * from customers;
+  
+  
+/*3.Write a command that increases by twenty percent the commissions of all salespeople with total orders above Rs. 3,000.*/
+
+  update salespeople set Comm = Comm + 0.20 where Snum in
+  
+  (select Snum orders where Amt  > 3000);
+
+
+
+
+
+
+ 
+ 
