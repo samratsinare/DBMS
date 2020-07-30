@@ -1,0 +1,69 @@
+
+-- Assignmnet 19 
+
+-- Name - Samrat Ashok Sinare
+
+-- Student id -  200240520084
+
+ use cdac_juhu;
+ 
+ /*1.Create a view that shows all of the customers who have the highest ratings.*/
+ 
+  create view v_rating as select * from customers where rating = 
+  
+  (select max(rating) from customers);
+  
+  desc v_rating;
+  
+  show full tables;
+  
+  show create view v_rating;
+  
+  select * from v_rating;
+  
+  
+/*2.Create a view that shows the number of salespeople in each city.*/
+
+create view v_salespeople as select city,count(city) 'total' from salespeople
+
+group by city;
+
+select * from v_salespeople;
+
+
+/*3.Create a view that shows the average and total orders for each salesperson after his or her name. 
+
+Assume all names are unique.*/
+
+ create view v_sal as select sname,avg(onum) average, count(onum) from salespeople
+ 
+ inner join orders using(snum) group by sname;
+ 
+ select * from v_sal;
+ 
+ desc v_sal;
+
+
+/*4.Create a view that shows each salesperson with multiple customers.*/
+
+ create view v_multiple as select  sname,cname from salespeople
+ 
+inner join customers using(snum);
+
+select * from v_multiple;
+
+desc v_multiple;
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
