@@ -1,0 +1,42 @@
+
+ -- Assignmnet 21
+ 
+ -- name - Samrat Ashok Sinare
+ 
+ -- student id - 200240520084
+ 
+ /*1.1) Give Ashish the right to change the ratings of the customers.*/
+
+  grant update on customers to Ashish ;
+  
+/*2.Give Ishaan the right to give other users the right to query the Orders table.*/
+
+   grant select on orders to Ishaan with grant option;
+
+     select on ishaan.orders to ashish;
+     
+     grant update on ishaan.orders to ashish;
+
+/*3.Take the INSERT privilege on Salespeople away from Ajita.*/
+
+  insert on salespeople from Ajita;
+  
+/*4.Grant Abhijeet the right to insert or update the Customers table while keeping her possible rating values in the range of 100 to 500.*/
+
+create or replace view range100 as select * from customers
+     
+ where rating between 100 and 500 with check option;
+
+GRANT update on range100 to Abhijeet;
+
+/*5.Allow Vikram to query the Customers table, but restrict his access to those customers whose rating is the lowest.*/
+
+create OR replace view v_restrict AS select * from customers
+
+ where rating NOT in (select min(rating) from customers);
+
+select  on v_restrict to Vikram;
+
+
+
+
